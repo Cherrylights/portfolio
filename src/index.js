@@ -29,4 +29,4 @@ console.log(
   "background-color: black; color: white; padding: 5px; line-height: 1.5rem;"
 );
 
-serviceWorker.unregister();
+serviceWorker.register();
