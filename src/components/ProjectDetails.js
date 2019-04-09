@@ -215,7 +215,7 @@ class ProjectDetail extends Component {
           }-content-wrapper`}
           id="fullpage-wrapper"
           ref={this.contentRef}
-          onWheel={this.scrollHandler}
+          // onWheel={this.scrollHandler}
         >
           <div className="details-content-header-wrapper">
             <div className="details-content-img">
@@ -277,14 +277,21 @@ class ProjectDetail extends Component {
               Close
             </Link>
             <p>{info}</p>
-            {images.map((image, index) => (
-              <img
-                src={image}
-                alt="project-img"
-                className="slide-in"
-                key={index}
-              />
-            ))}
+            {websiteLink && (
+              <div className="website-link-container">
+                <a
+                  href={websiteLink}
+                  className="website-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={this.props.value.cursorIn}
+                  onMouseLeave={this.props.value.cursorOut}
+                >
+                  Visit site
+                </a>
+              </div>
+            )}
+
             {video && (
               <div className="videoWrapper">
                 <iframe
@@ -299,6 +306,16 @@ class ProjectDetail extends Component {
                 />
               </div>
             )}
+
+            {images.map((image, index) => (
+              <img
+                src={image}
+                alt="project-img"
+                className="slide-in"
+                key={index}
+              />
+            ))}
+
             {websiteLink && (
               <div className="website-link-container">
                 <a

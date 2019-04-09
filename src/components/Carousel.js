@@ -74,28 +74,6 @@ export default class Carousel extends Component {
         });
       }
     }
-
-    // if (this.props.sliderChangedNum !== prevProps.sliderChangedNum) {
-    //   console.log(
-    //     "didUpdate",
-    //     prevProps.slideDirection,
-    //     this.props.slideDirection
-    //   );
-    // }
-    // setTimeout(() => {
-    //   if (this.props.sliderChangedNum !== prevProps.sliderChangedNum) {
-    //     // console.log(this.props);
-    //     if (this.props.slideDirection === "up") {
-    //       this.props.setAnimationStatus(true);
-    //       this.slider.nextSlide().then(result => {
-    //         this.props.setAnimationStatus(false);
-    //         console.log("Promise result: " + result);
-    //       });
-    //     } else {
-    //       this.slider.prevSlide();
-    //     }
-    //   }
-    // }, 0);
   }
 
   render() {

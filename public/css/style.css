@@ -527,7 +527,7 @@ span.backdrop {
 
 .details-content-wrapper .details-content {
   width: 60%;
-  padding: 0 20% 50vh;
+  padding: 0 20% 0;
   font-size: 1.2rem;
   line-height: 1.8rem;
   color: white;

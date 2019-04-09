@@ -27,7 +27,6 @@ export default class Home extends Component {
         y: event.touches[0].clientY
       }
     });
-    // console.log(this.state.ts);
   };
 
   touchEndHandler = event => {
@@ -35,7 +34,6 @@ export default class Home extends Component {
       x: event.changedTouches[0].clientX,
       y: event.changedTouches[0].clientY
     };
-    // console.log(te);
 
     if (!this.props.value.state.isAnimating) {
       if (this.state.ts.y > te.y + 100) {
@@ -43,7 +41,6 @@ export default class Home extends Component {
         this.props.value.nextProject();
       } else if (this.state.ts.y < te.y - 100) {
         // swipe down
-        //console.log("swipe down");
         this.props.value.previousProject();
       }
     }
@@ -92,6 +89,16 @@ export default class Home extends Component {
       y: 0
     });
   };
+
+  componentDidMount() {
+    const thumbnails = this.props.value.state.projects.map(
+      project => project.headerImage
+    );
+    thumbnails.forEach(thumbnail => {
+      const img = new Image();
+      img.src = thumbnail;
+    });
+  }
 
   render() {
     const project = this.props.value.state.projects[

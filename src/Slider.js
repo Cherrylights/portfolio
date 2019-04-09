@@ -16,7 +16,6 @@ class Slider {
     PIXI.utils.skipHello();
     PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.LINEAR;
     PIXI.settings.PRECISION_FRAGMENT = PIXI.PRECISION.HIGH;
-
     this.canvasWidth = this.canvas.clientWidth;
     this.canvasHeight = this.canvas.clientHeight;
     this.dpr = window.devicePixelRatio && window.devicePixelRatio >= 2 ? 2 : 1;
@@ -47,9 +46,6 @@ class Slider {
   }
 
   loadImages() {
-    // this.slideData.forEach((imgPath, index) => {
-    //   PIXI.loader.add(`${index}`, imgPath);
-    // });
     PIXI.loader.load((loader, images) => {
       this.images = images;
       this.createSlider();

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./css/App.css";
 import App from "./components/App";
 import IE from "./components/IE";
 import { isSafari, isIE, isEdge } from "react-device-detect";
@@ -24,9 +23,9 @@ if (isSafari) {
 ReactGA.initialize("UA-134734648-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-console.log(
-  "%cDesigned and developed by Yikai 🚀, if you have any questions please contact me at zhangyikai@hotmail.com. Thanks for visiting, have a good one. 😃",
-  "background-color: black; color: white; padding: 5px; line-height: 1.5rem;"
-);
+// console.log(
+//   "%cDesigned and developed by Yikai 🚀, if you have any questions please contact me at zhangyikai@hotmail.com. Thanks for visiting, have a good one. 😃",
+//   "background-color: black; color: white; padding: 5px; line-height: 1.5rem;"
+// );
 
 serviceWorker.register();

@@ -1,5 +1,51 @@
 const projects = [
   {
+    id: "wensi",
+    name: "Wensi",
+    type: "Web Project",
+    year: "2019",
+    tools: "ReactJS / PIXIJS",
+    role: "Design / Development",
+    images: [
+      "/images/wensi-1.jpg",
+      "/images/wensi-2.jpg",
+      "/images/wensi-3.jpg",
+      "/images/wensi-4.jpg",
+      "/images/wensi-5.jpg"
+    ],
+    headerImage: "/images/wensi-header.jpg",
+    mobileImage: "/images/wensi-mobile.jpg",
+    video: null,
+    websiteLink: "https://wensi-testing.surge.sh/",
+    color: "white",
+    caption: "A portfolio + eCommerce website designed for a scarf designer",
+    info:
+      "Wensi is a portfolio plus eCommerce website that I designed and developed for my friend who’s a scarf designer. It’s built on top of React, Redux and PIXIJS. The website uses Shopify as its eCommerce solution so all the content presenting on the page is fetched through the Shopify buy api. Therefore the website will automatically get updated once any new design or collections comes out in the future."
+  },
+  {
+    id: "eventor",
+    name: "Eventor",
+    type: "Web Project",
+    year: "2019",
+    tools: "ReactJS / Firebase",
+    role: "Design / Development",
+    images: [
+      "/images/eventor-1.jpg",
+      "/images/eventor-2.jpg",
+      "/images/eventor-3.jpg",
+      "/images/eventor-4.jpg",
+      "/images/eventor-5.jpg"
+    ],
+    headerImage: "/images/eventor-header.jpg",
+    mobileImage: "/images/eventor-mobile.jpg",
+    video: null,
+    websiteLink: "https://run-run-222202.firebaseapp.com/",
+    color: "white",
+    caption: "A full-stack events sharing web application",
+    info:
+      "Eventor is a full-stack web application for people who are looking for new events around them. The user can create, join or share events on the platform. It’s a practice project of mine to learn React, Redux and Firebase."
+  },
+  {
     id: "holm",
     name: "Holm",
     type: "Web Project",
@@ -17,8 +63,7 @@ const projects = [
     video: null,
     websiteLink: "https://holm.surge.sh/",
     color: "white",
-    caption:
-      "Holm is a minimalistic conceptual design project for a sneaker store.",
+    caption: "A minimalistic conceptual design project for a sneaker store.",
     info:
       "Holm is a conceptual design project for a sneaker store with a minimalism design style. The idea is to create a stylish online store that is able to provide a simple and intuitive user experience for customers. The website is still an ongoing project  and by far only finishes the front end part. The next step is to make it talk to a backend JSON API in order to manage inventory and also integrate with a payment API."
   },
