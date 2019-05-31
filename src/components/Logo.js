@@ -58,9 +58,9 @@ export default class Logo extends Component {
         onMouseLeave={this.mouseLeaveHandler}
         onMouseMove={this.mouseMoveHandler}
       >
-        <img src="/images/logo.svg" alt="logo" />
-        {/* <p id="yikai">Yikai</p>
-        <p id="zhang">Zhang</p> */}
+        {/* <img src="/images/logo.svg" alt="logo" /> */}
+        <p id="yikai">Yikai</p>
+        <p id="zhang">Zhang</p>
       </Link>
     );
   };
