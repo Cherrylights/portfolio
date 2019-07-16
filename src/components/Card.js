@@ -23,6 +23,7 @@ export default class Card extends Component {
       sliderChangedNum,
       setAnimationStatus,
       setImageStatus,
+      setFinishLoadingCanvas,
       isImageLoaded
     } = this.props;
     return (
@@ -46,6 +47,7 @@ export default class Card extends Component {
               sliderChangedNum={sliderChangedNum}
               setAnimationStatus={setAnimationStatus}
               setImageStatus={setImageStatus}
+              setFinishLoadingCanvas={setFinishLoadingCanvas}
               isImageLoaded={isImageLoaded}
             />
           </div>

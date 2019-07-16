@@ -46,13 +46,17 @@ class Slider {
   }
 
   loadImages() {
-    PIXI.loader.load((loader, images) => {
-      this.images = images;
-      this.createSlider();
+    return new Promise((resolve, reject) => {
+      PIXI.loader.load(async (loader, images) => {
+        this.images = images;
+        await this.createSlider();
+        // console.log("finish loading");
+        resolve(true);
+      });
     });
   }
 
-  createSlider() {
+  async createSlider() {
     this.slider = new PIXI.Container();
     this.slider.width = this.app.screen.width;
     this.slider.height = this.app.screen.height;
@@ -68,47 +72,52 @@ class Slider {
 
     this.app.stage.interactive = true;
 
-    this.addSlides(this.currentIndex);
-    this.createDisplacementFilter();
+    await this.addSlides(this.currentIndex);
+    await this.createDisplacementFilter();
+    return true;
   }
 
   addSlides(currentIndex) {
-    this.slides = {
-      activeIndex: currentIndex,
-      count: 0
-    };
-    let i = 0;
+    return new Promise((resolve, reject) => {
+      this.slides = {
+        activeIndex: currentIndex,
+        count: 0
+      };
+      let i = 0;
 
-    Object.keys(this.images).forEach(key => {
-      const slide = new PIXI.Sprite(this.images[key].texture);
-      slide.width = this.app.screen.width;
-      slide.height = this.app.screen.height;
-      slide.y = i === currentIndex ? 0 : this.app.screen.height;
+      Object.keys(this.images).forEach(key => {
+        const slide = new PIXI.Sprite(this.images[key].texture);
+        slide.width = this.app.screen.width;
+        slide.height = this.app.screen.height;
+        slide.y = i === currentIndex ? 0 : this.app.screen.height;
 
-      this.slides[i] = slide;
-      this.slider.addChild(slide);
+        this.slides[i] = slide;
+        this.slider.addChild(slide);
 
-      i++;
-      this.slides.count++;
+        i++;
+        this.slides.count++;
+      });
+      resolve(true);
     });
   }
 
   createDisplacementFilter() {
-    this.dispSprite = PIXI.Sprite.fromImage("/images/displacement.jpg");
-    this.dispSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-    this.dispSprite.skew.x = 0.5;
-    this.dispSprite.skew.y = -0.5;
-    this.dispSprite.position.x = -760;
-    this.dispSprite.position.y = -100;
-    this.dispSprite.scale.y = 3;
-    this.dispSprite.scale.x = 3;
-    this.app.stage.addChild(this.dispSprite);
+    return new Promise((resolve, reject) => {
+      this.dispSprite = PIXI.Sprite.fromImage("/images/displacement.jpg");
+      this.dispSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+      this.dispSprite.skew.x = 0.5;
+      this.dispSprite.skew.y = -0.5;
+      this.dispSprite.position.x = -760;
+      this.dispSprite.position.y = -100;
+      this.dispSprite.scale.y = 3;
+      this.dispSprite.scale.x = 3;
+      this.app.stage.addChild(this.dispSprite);
 
-    this.dispFilter = new PIXI.filters.DisplacementFilter(this.dispSprite, 0);
-    this.slider.filters = [this.dispFilter];
+      this.dispFilter = new PIXI.filters.DisplacementFilter(this.dispSprite, 0);
+      this.slider.filters = [this.dispFilter];
+      resolve(true);
+    });
   }
-
-  hoverSlide() {}
 
   nextSlide() {
     // console.log(this);

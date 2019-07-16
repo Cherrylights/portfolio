@@ -3,7 +3,7 @@ import projects from "./projects";
 
 const Context = React.createContext();
 
-export default class Provider extends Component {
+class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,8 @@ export default class Provider extends Component {
       sliderChangedNum: 0,
       isTransitioning: false,
       isAnimating: false,
-      isImageLoaded: false
+      isImageLoaded: false,
+      isCanvasLoaded: false
     };
   }
   render() {
@@ -65,6 +66,12 @@ export default class Provider extends Component {
 
             // console.log("after clicking next", this.state.count);
             // This is because the this.state.count does not get updated until the component has been re-rendered.
+          },
+
+          setFinishLoadingCanvas: () => {
+            this.setState({
+              isCanvasLoaded: true
+            });
           },
 
           cursorIn: () => {

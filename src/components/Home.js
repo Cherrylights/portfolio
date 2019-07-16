@@ -110,7 +110,8 @@ export default class Home extends Component {
       count,
       slideDirection,
       sliderChangedNum,
-      isImageLoaded
+      isImageLoaded,
+      isCanvasLoaded
     } = this.props.value.state;
     const {
       nextProject,
@@ -118,7 +119,8 @@ export default class Home extends Component {
       cursorIn,
       cursorOut,
       setAnimationStatus,
-      setImageStatus
+      setImageStatus,
+      setFinishLoadingCanvas
     } = this.props.value;
     return (
       <React.Fragment>
@@ -149,6 +151,7 @@ export default class Home extends Component {
                 sliderChangedNum={sliderChangedNum}
                 setAnimationStatus={setAnimationStatus}
                 setImageStatus={setImageStatus}
+                setFinishLoadingCanvas={setFinishLoadingCanvas}
                 isImageLoaded={isImageLoaded}
               />
               <div className="chevrons">
@@ -171,6 +174,35 @@ export default class Home extends Component {
               </div>
             </div>
             <Overlay />
+            {isCanvasLoaded ? (
+              ""
+            ) : (
+              <div
+                className="loader-wrapper"
+                style={{
+                  position: "absolute",
+                  width: "100vw",
+                  height: "100vh",
+                  background: "white",
+                  top: 0,
+                  left: 0,
+                  zIndex: 1000
+                }}
+              >
+                <h1
+                  style={{
+                    fontFamily: "Arial, Helvetica, sans-serif",
+                    display: "block",
+                    position: "absolute",
+                    left: "50%",
+                    top: "50%",
+                    transform: "translate3d(-50%, -50%, 0)"
+                  }}
+                >
+                  Hi, I'm Yikai, Welcome.
+                </h1>
+              </div>
+            )}
           </BrowserView>
 
           <MobileView>

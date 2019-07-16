@@ -45,11 +45,10 @@ export default class Carousel extends Component {
         this.slider.setOptions();
         this.slider.createApp();
         this.slider.addImages();
-        this.slider.loadImages();
-        this.carouselRef.current.addEventListener(
-          "mouseenter",
-          this.slider.hoverSlide.bind(this.slider)
-        );
+        this.slider.loadImages().then(result => {
+          // console.log(result);
+          this.props.setFinishLoadingCanvas();
+        });
       }
     }
   }
