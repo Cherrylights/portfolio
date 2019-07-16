@@ -44,8 +44,8 @@ export default class About extends Component {
         <div className="about-text part-1">
           {" "}
           <p>
-            I'm Yikai, a web designer and developer based in Toronto. I enjoy
-            creating interesting and meaningful experience for my users.
+            Hi, I'm Yikai, a web designer and developer based in Toronto. I
+            enjoy creating fun and meaningful user experience for the web.
           </p>
         </div>
         <div className="about-text part-2">
