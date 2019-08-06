@@ -16,7 +16,7 @@ const projects = [
     headerImage: "/images/wensi-header.jpg",
     mobileImage: "/images/wensi-mobile.jpg",
     video: null,
-    websiteLink: "https://wensi-testing.surge.sh/",
+    websiteLink: "https://wenzi-testing.netlify.com",
     color: "white",
     caption: "A portfolio + eCommerce website designed for a scarf designer",
     info:
