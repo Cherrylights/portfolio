@@ -46,29 +46,6 @@ const projects = [
       "Simple dashboard is a light-weight dashboard that supports drag and drop, multiple tabs and light/dark theme switching. It's built in React, Redux, TypeScript, AntDesign and FusionCharts."
   },
   {
-    id: "eventor",
-    name: "Eventor",
-    type: "Web Project",
-    year: "2019",
-    tools: "ReactJS / Firebase",
-    role: "Design / Development",
-    images: [
-      "/images/eventor-1.jpg",
-      "/images/eventor-2.jpg",
-      "/images/eventor-3.jpg",
-      "/images/eventor-4.jpg",
-      "/images/eventor-5.jpg"
-    ],
-    headerImage: "/images/eventor-header.jpg",
-    mobileImage: "/images/eventor-mobile.jpg",
-    video: null,
-    websiteLink: "https://run-run-222202.firebaseapp.com/",
-    color: "white",
-    caption: "A full-stack events sharing web application",
-    info:
-      "Eventor is a full-stack web application for people who are looking for new events around them. The user can create, join or share events on the platform. It’s a practice project of mine to learn React, Redux and Firebase."
-  },
-  {
     id: "holm",
     name: "Holm",
     type: "Web Project",
@@ -90,7 +67,6 @@ const projects = [
     info:
       "Holm is a conceptual design project for a sneaker store with a minimalism design style. The idea is to create a stylish online store that is able to provide a simple and intuitive user experience for customers. The website is still an ongoing project  and by far only finishes the front end part. The next step is to make it talk to a backend JSON API in order to manage inventory and also integrate with a payment API."
   },
-
   {
     id: "moneris-shop",
     name: "Moneris Shop",
@@ -244,3 +220,27 @@ const projects = [
 ];
 
 export default projects;
+
+// {
+//     id: "eventor",
+//     name: "Eventor",
+//     type: "Web Project",
+//     year: "2019",
+//     tools: "ReactJS / Firebase",
+//     role: "Design / Development",
+//     images: [
+//       "/images/eventor-1.jpg",
+//       "/images/eventor-2.jpg",
+//       "/images/eventor-3.jpg",
+//       "/images/eventor-4.jpg",
+//       "/images/eventor-5.jpg"
+//     ],
+//     headerImage: "/images/eventor-header.jpg",
+//     mobileImage: "/images/eventor-mobile.jpg",
+//     video: null,
+//     websiteLink: "https://run-run-222202.firebaseapp.com/",
+//     color: "white",
+//     caption: "A full-stack events sharing web application",
+//     info:
+//       "Eventor is a full-stack web application for people who are looking for new events around them. The user can create, join or share events on the platform. It’s a practice project of mine to learn React, Redux and Firebase."
+//   }
