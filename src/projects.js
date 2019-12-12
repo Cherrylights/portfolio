@@ -192,6 +192,30 @@ const projects = [
   },
 
   {
+    id: "fishpond",
+    name: "Fishpond",
+    type: "New Media Project",
+    year: "2015",
+    tools: "Processing / Leap Motion",
+    role: "Design / Development",
+    images: [
+      "/images/fishpond-1.jpg",
+      "/images/fishpond-2.jpg",
+      "/images/fishpond-3.jpg",
+      "/images/fishpond-4.jpg"
+    ],
+    headerImage: "/images/fishpond-header.jpg",
+    mobileImage: "/images/fishpond-mobile.jpg",
+    video: "https://youtu.be/WA1glTNQqQ4",
+    websiteLink: null,
+    color: "black",
+    caption:
+      "A new media project that brings empathy into the interation experience",
+    info:
+      "Fishpond is a project that wants to brings empathy into the experience. Using water as the communication interface creates a uniqe tactile impression and intimacy during the interaction. The texture of water and the rhythm of fishes make every visitor have their unique emotional interpretations."
+  },
+
+  {
     id: "temple",
     name: "Temple",
     type: "VR/AR Photogrammetry App",
