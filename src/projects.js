@@ -210,7 +210,7 @@ const projects = [
     websiteLink: null,
     color: "black",
     caption:
-      "A new media project that brings empathy into the interation experience",
+      "A new media project that brings empathy into interation experience",
     info:
       "Fishpond is a project that wants to brings empathy into the experience. Using water as the communication interface creates a uniqe tactile impression and intimacy during the interaction. The texture of water and the rhythm of fishes make every visitor have their unique emotional interpretations."
   },
