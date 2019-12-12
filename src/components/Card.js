@@ -67,7 +67,7 @@ export default class Card extends Component {
                 key={id}
                 timeout={{ enter: 1100, exit: 1100 }}
               >
-                <span>{`0${currentIndex}`}</span>
+                <span>{`${currentIndex < 10 && 0}${currentIndex}`}</span>
               </CSSTransition>
             </TransitionGroup>
             <div className="card-type-index">
