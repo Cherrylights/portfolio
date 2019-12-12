@@ -206,7 +206,7 @@ const projects = [
     ],
     headerImage: "/images/fishpond-header.jpg",
     mobileImage: "/images/fishpond-mobile.jpg",
-    video: "https://youtu.be/WA1glTNQqQ4",
+    video: "https://www.youtube.com/embed/WA1glTNQqQ4",
     websiteLink: null,
     color: "black",
     caption:
