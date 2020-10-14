@@ -45,13 +45,13 @@ export default class About extends Component {
           {" "}
           <p>
             Hi, I'm Yikai, a web designer and developer based in Toronto. I
-            enjoy creating fun and meaningful user experience for the web.
+            enjoy creating appealing user experience for the web.
           </p>
         </div>
         <div className="about-text part-2">
           <p>
-            I graduated at OCAD University with a Master Degree of Design. I'm
-            currently working at Moneris.
+            I'm currently working on creating compelling content that builds awareness of <a href="https://www.shopify.com" target="_blank" rel="noopener noreferrer" onMouseEnter={cursorIn}
+            onMouseLeave={cursorOut}>Shopify</a>.
           </p>
         </div>
         <div className="contact-title">
