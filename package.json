@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "pixi.js": "^4.8.3",
     "react": "^16.5.2",
     "react-charming": "^1.1.0",
